@@ -1,0 +1,173 @@
+type: edu
+files:
+- name: src/client/Main.java
+  visible: true
+  text: |
+    package client;
+
+
+
+    public class Main {
+
+        public static void main(String[] args) {
+            System.out.println("Hello, world!");
+
+
+        }
+    }
+  learner_created: false
+- name: src/server/Main.java
+  visible: true
+  text: |
+    package server;
+
+    import java.util.ArrayList;
+    import java.util.Scanner;
+
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+
+            //intialising database
+            Scanner scan = new Scanner(System.in);
+            ArrayList<String> database = new ArrayList<>(100);
+            for (int i = 0; i < 100; i++) {
+                database.add("");
+            }
+            //taking input
+
+            while(scan.hasNext()){
+                String command = scan.nextLine();
+                String[] strArr = command.split(" ");
+
+
+                if (strArr[0].equals("set") || strArr[0].equals("get")
+                        || strArr[0].equals("delete")
+                        || strArr[0].equals("exit")
+                ) {
+                    if(strArr[0].equals("exit"))
+                        break;
+
+                    else{
+                        int second = Integer.parseInt(strArr[1]);
+
+
+                        if (strArr[0].equals("set") && (second <= 100) && second > 0) {
+                            StringBuilder s = new StringBuilder();
+                            for (int j = 2; j < strArr.length; j++) {
+
+                                s.append(strArr[j] + " ");
+                            }
+
+                            database.add(second - 1, String.valueOf(s));
+                            System.out.println("OK");
+
+                        }
+
+                        else if (strArr[0].equals("get")) {
+                            if (second > database.size() || second < 0 || database.get(second - 1).equals("")){
+                                System.out.println("ERROR");
+                            }
+                            else{
+                                System.out.println(database.get(second - 1));
+
+                            }
+                        }
+                        else if (strArr[0].equals("delete")) {
+
+                            if (second <= 100 && second > 0){
+                                database.add(second - 1, "");
+                                System.out.println("OK");
+                            }
+
+                            else{
+                                System.out.println("ERROR");
+                            }
+
+                        }
+
+                    }
+                }
+                else
+                    System.out.println("ERROR");
+            }
+        }}
+  learner_created: false
+- name: test/JsonDatabaseTest.java
+  visible: false
+  text: |
+    import org.hyperskill.hstest.dynamic.DynamicTest;
+    import org.hyperskill.hstest.stage.StageTest;
+    import org.hyperskill.hstest.testcase.CheckResult;
+    import org.hyperskill.hstest.testing.TestedProgram;
+
+    public class JsonDatabaseTest extends StageTest<String> {
+
+        private static final String CORRECT_SERVER_OUTPUT =
+            "Server started!\n" +
+                "Received: Give me a record # N\n" +
+                "Sent: A record # N was sent!";
+
+        private static final String CORRECT_CLIENT_OUTPUT =
+            "Client started!\n" +
+                "Sent: Give me a record # N\n" +
+                "Received: A record # N was sent!";
+
+        @DynamicTest(order = 1)
+        CheckResult test() {
+
+            TestedProgram server = new TestedProgram("server");
+            server.startInBackground();
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            String serverOutput = server.getOutput().trim();
+
+            if (!serverOutput.trim().equals("Server started!")) {
+                return CheckResult.wrong("Server output should be 'Server started!' until a client connects!");
+            }
+
+            TestedProgram client = new TestedProgram("client");
+
+            String clientOutput = client.start();
+            serverOutput += "\n" + server.getOutput();
+
+            String[] serverOutputLines = serverOutput.split("\n");
+
+            if (serverOutputLines.length != 3) {
+                return CheckResult.wrong("After the client connects to the server, the server output should contain 3 lines!");
+            }
+
+            String serverOutputLastLine = serverOutputLines[serverOutputLines.length - 1];
+
+            if (!serverOutputLastLine.contains("Sent: A record #") || !serverOutputLastLine.contains("was sent!")) {
+                return CheckResult.wrong("Server output after client connects to the server should be:\n"
+                    + CORRECT_SERVER_OUTPUT + "\n\nWhere N is some number.\n\nYour output:\n" + serverOutput);
+            }
+
+            String[] clientOutputLines = clientOutput.split("\n");
+
+            if (clientOutputLines.length != 3) {
+                return CheckResult.wrong("After the client connects to the server, the client output should contain 3 lines!");
+            }
+
+            String clientOutputLastLine = clientOutputLines[clientOutputLines.length - 1];
+
+            if (!clientOutputLastLine.contains("Received: A record #") || !clientOutputLastLine.contains("was sent!")) {
+                return CheckResult.wrong("Client output after client connects to the server should be:\n"
+                    + CORRECT_CLIENT_OUTPUT + "\n\nWhere N is some number.\n\nYour output:\n" + clientOutput);
+            }
+
+            return CheckResult.correct();
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5491#comment
+status: Solved
+record: 2

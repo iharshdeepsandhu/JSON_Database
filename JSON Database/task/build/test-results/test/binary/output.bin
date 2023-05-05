@@ -1,0 +1,34 @@
+[1;31m
+Start test 1[0m
+Client started!
+Sent: {"type":"exit"}
+Received: {"response":"OK"}
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+ Server started!
+Client started!
+7Sent: {"type":"set","key":"1","value":"Hello world!"}
+Received: {"response":"OK"}
+Client started!
+žSent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+Received: {"response":"OK"}
+Client started!
+.Sent: {"type":"get","key":["person","name"]}
+1Received: {"response":"OK","value":"Elon Musk"}
+Client started!
+HSent: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+w{1=Hello world!, person={name=Elon Musk, car={model=Tesla Roadster, year=2018}, rocket={name=Falcon 9, launches=87}}}
+{launches=88.0}
+{launches=88}
+{rocket={launches=88.0}}
+{rocket={launches=88.0}}
+#{person={rocket={launches=88.0}}}
+#{person={rocket={launches=88.0}}}
+{rocket={launches=88.0}}
+3{1=Hello world!, person={rocket={launches=88.0}}}
+Received: {"response":"OK"}
+Client started!
+'Sent: {"type":"get","key":["person"]}
+BReceived: {"response":"OK","value":{"rocket":{"launches":88.0}}}

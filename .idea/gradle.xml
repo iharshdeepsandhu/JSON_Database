@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/JSON Database/task" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/test-results" />
+            <option value="$PROJECT_DIR$/JSON Database/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/An anonymous class with three methods" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/And always these rules" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/Capture variables" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/Implement Runnable" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/String reverser" />
+            <option value="$PROJECT_DIR$/Topics/Anonymous classes/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Branching statements/A suitable output" />
+            <option value="$PROJECT_DIR$/Topics/Branching statements/Bus tour" />
+            <option value="$PROJECT_DIR$/Topics/Branching statements/The integer barrier" />
+            <option value="$PROJECT_DIR$/Topics/Branching statements/The sequence" />
+            <option value="$PROJECT_DIR$/Topics/Branching statements/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Command/Real-World examples" />
+            <option value="$PROJECT_DIR$/Topics/Command/Remote Controller" />
+            <option value="$PROJECT_DIR$/Topics/Command/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Command/Undo command" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/Account and its owner" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/Constructor definition" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/Cookie" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/Creating news" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Constructor/User" />
+            <option value="$PROJECT_DIR$/Topics/Default methods/Add new default method" />
+            <option value="$PROJECT_DIR$/Topics/Default methods/Diamond problem" />
+            <option value="$PROJECT_DIR$/Topics/Default methods/Implement a default method" />
+            <option value="$PROJECT_DIR$/Topics/Default methods/Resolve a diamond problem" />
+            <option value="$PROJECT_DIR$/Topics/Default methods/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Executors/Asynchronous email sending" />
+            <option value="$PROJECT_DIR$/Topics/Executors/Check whether a number is prime" />
+            <option value="$PROJECT_DIR$/Topics/Executors/Messaging" />
+            <option value="$PROJECT_DIR$/Topics/Executors/Supplying a task" />
+            <option value="$PROJECT_DIR$/Topics/Executors/The order of lines in output" />
+            <option value="$PROJECT_DIR$/Topics/Executors/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Functional interfaces/A lambda expression with seven arguments" />
+            <option value="$PROJECT_DIR$/Topics/Functional interfaces/Ternary predicate" />
+            <option value="$PROJECT_DIR$/Topics/Functional interfaces/The requirement" />
+            <option value="$PROJECT_DIR$/Topics/Functional interfaces/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Find the sum" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Right Rotation" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select loops" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Select one loop" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Method references/Ascending and descending sorting" />
+            <option value="$PROJECT_DIR$/Topics/Method references/Replace the lambda expression with a method reference" />
+            <option value="$PROJECT_DIR$/Topics/Method references/Syntax of method references" />
+            <option value="$PROJECT_DIR$/Topics/Method references/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Package/A keyword for importing a class" />
+            <option value="$PROJECT_DIR$/Topics/Package/Binary search" />
+            <option value="$PROJECT_DIR$/Topics/Package/Default packages" />
+            <option value="$PROJECT_DIR$/Topics/Package/Package features" />
+            <option value="$PROJECT_DIR$/Topics/Package/Sorting arrays" />
+            <option value="$PROJECT_DIR$/Topics/Package/The default import" />
+            <option value="$PROJECT_DIR$/Topics/Package/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Basics of Maps" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Counting words" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Creating a map" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Displaying pairs" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/The property of TreeMap" />
+            <option value="$PROJECT_DIR$/Topics/The Map interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Countdown counter" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Methods" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Multithreaded counter" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Synchronized keyword" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Thread-safe account" />
+            <option value="$PROJECT_DIR$/Topics/Thread synchronization/Two methods, two statements" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
